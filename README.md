@@ -13,7 +13,7 @@ cd chatgpt-command-suggestion
 sudo cp suggest /usr/bin/suggest
 
 
-Usage: suggest <command description>
+Usage: suggest (command description)
 
 # Example:
 
