@@ -4,6 +4,8 @@ ChatGPT interface that suggests commandline commands
 # Installation
 git clone https://github.com/bartman081523/chatgpt-command-suggestion
 
+sudo apt install python3-pip
+
 sudo pip install openai
 
 cd chatgpt-command-suggestion
