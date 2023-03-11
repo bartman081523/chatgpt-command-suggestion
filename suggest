@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+
+import openai
+import os,sys
+
+if len(sys.argv) < 2:
+    print("Usage: suggest <command description>")
+    sys.exit()
+
+command_description = " ".join(sys.argv[1:])
+
+#openai.api_key = open("~/.config/openai-key.txt", "r").read().strip("\n")
+openai.api_key = "YOUR_API_KEY"
+message_history = []
+
+prompt = f"You act as a linux command suggestion. I ask you for a natural language description of a linux command, and you give me the linux command. Give me only the linux command, without any explanation. My description is: {command_description}"
+
+message_history.append({"role": "user", "content": f"{prompt}"})
+
+completion = openai.ChatCompletion.create(
+  model="gpt-3.5-turbo",
+  messages=message_history
+)
+
+suggested_command = completion.choices[0].message.content.strip()
+
+print(f"Suggested command: {suggested_command}")
+response = input("Execute suggested command? (Y/n): ")
+
+if response.lower() == "y" or response=="":
+    os.system(suggested_command)
+else:
+    print("No action taken.")
+
