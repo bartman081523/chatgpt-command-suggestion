@@ -4,7 +4,11 @@ ChatGPT interface that suggests commandline commands
 # Installation
 git clone https://github.com/bartman081523/chatgpt-command-suggestion
 
-sudo (apt/whatever) install python3-pip
+-paste your OpenAI API key in the "suggest" file as 
+
+openai.api_key = "YOUR_API_KEY"
+
+sudo apt install python3-pip
 
 sudo pip install openai
 
@@ -24,3 +28,10 @@ Suggested command: sudo rsync -aAXv / /mnt/ --exclude={/dev/*,/proc/*,/sys/*,/tm
 Execute suggested command? (Y/n): n
 
 No action taken.
+
+
+suggest grep the log for kernel errors
+
+Suggested command: dmesg | grep "error"
+
+Execute suggested command? (Y/n): n
