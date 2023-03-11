@@ -4,7 +4,7 @@ ChatGPT interface that suggests commandline commands
 Usage: suggest <command description>
 
 # Example:
-´´´
+
 suggest clone sda1 to /mnt/
 Suggested command: dd if=/dev/sda1 of=/mnt/ image_name.img
 Execute suggested command? (Y/n): n
