@@ -1,5 +1,5 @@
-# chatgpt-command-suggestion
-ChatGPT interface that suggests Linux commandline commands based on a natural-language description
+# chatgpt-linux-command-suggestion
+ChatGPT interface that suggests Linux commands based on natural-language description
 
 # Installation
 git clone https://github.com/bartman081523/chatgpt-command-suggestion
